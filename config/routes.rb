@@ -1,4 +1,9 @@
+
 LBC::Application.routes.draw do
+  get "accueil/index"
+  root 'accueil#index'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
