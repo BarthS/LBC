@@ -1,0 +1,25 @@
+= form_for @annonce do |f|
+  - if @annonce.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@annonce.errors.count, "error")} prohibited this annonce from being saved:"
+      %ul
+        - @annonce.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :numero
+    = f.number_field :numero
+  .field
+    = f.label :user
+    = f.text_field :user
+  .field
+    = f.label :titre
+    = f.text_field :titre
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :image
+    = f.text_field :image
+  .actions
+    = f.submit 'Save'

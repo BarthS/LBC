@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Numero:
+  = @annonce.numero
+%p
+  %b User:
+  = @annonce.user
+%p
+  %b Titre:
+  = @annonce.titre
+%p
+  %b Description:
+  = @annonce.description
+%p
+  %b Image:
+  = @annonce.image
+
+= link_to 'Edit', edit_annonce_path(@annonce)
+\|
+= link_to 'Back', annonces_path
