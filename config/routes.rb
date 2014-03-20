@@ -1,5 +1,6 @@
 
 LBC::Application.routes.draw do
+  devise_for :users
   get "accueil/index"
   root 'accueil#index'
 
