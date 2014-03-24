@@ -24,7 +24,7 @@ class AnnoncesController < ApplicationController
   # POST /annonces
   # POST /annonces.json
   def create
-    @annonce = Annonce.new(annonce_params)
+    @annonce = Annonce.new(annonce_params.merge(author: current_user))
 
     respond_to do |format|
       if @annonce.save
@@ -69,6 +69,6 @@ class AnnoncesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def annonce_params
-      params.require(:annonce).permit(:numero, :user, :titre, :description, :image)
+      params.require(:annonce).permit(:numero, :titre, :description, :image)
     end
 end

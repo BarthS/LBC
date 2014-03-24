@@ -2,8 +2,6 @@
 
 %table
   %tr
-    %th Numero
-    %th Utilisateur
     %th Titre
     %th Description
     %th Image
@@ -13,8 +11,6 @@
 
   - @annonces.each do |annonce|
     %tr
-      %td= annonce.numero
-      %td= annonce.user
       %td= annonce.titre
       %td= annonce.description
       %td= annonce.image
