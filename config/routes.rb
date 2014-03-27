@@ -1,5 +1,10 @@
 
 LBC::Application.routes.draw do
+  get "users/index"
+  get "users/show"
+  get "users/edit"
+  get "users/update"
+  get "users/destroy"
   resources :annonces
   devise_for :users
   get "accueil/index"
